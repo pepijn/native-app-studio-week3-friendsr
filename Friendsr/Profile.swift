@@ -22,9 +22,17 @@ class Profile {
         return UIImage.init(named: "\(shortName.lowercaseString)")!
     }
 
+    var rating: Int? {
+        return NSUserDefaults.standardUserDefaults().valueForKey(fullName) as? Int
+    }
+
     init(shortName: String, fullName: String, details: String) {
         self.shortName = shortName
         self.fullName = fullName
         self.details = details
+    }
+
+    func rate(rating: Int) {
+        NSUserDefaults.standardUserDefaults().setObject(rating, forKey: fullName)
     }
 }

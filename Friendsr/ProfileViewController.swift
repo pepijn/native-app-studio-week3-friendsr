@@ -13,27 +13,32 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var details: UITextView!
+    @IBOutlet weak var ratingControl: UISegmentedControl!
 
     var profile: Profile?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        for index in 1...5 {
-//            let buttonView = UIButton.init()
-//            buttonView.setTitle("\(index) star", forState: .Normal)
-//            ratingButtonContainer.addArrangedSubview(buttonView)
-//        }
-
         profileImage.image = profile!.image
         name.text = profile!.fullName
         details.text = profile!.details
+
+        let rating = profile?.rating
+
+        if rating != nil {
+            ratingControl.selectedSegmentIndex = rating! - 1
+        }
     }
 
-    @IBAction func popView(sender: UIButton) {
+    @IBAction func popView(sender: AnyObject) {
         dismissViewControllerAnimated(true) { () -> Void in
             
         }
     }
     
+    @IBAction func rate(sender: UISegmentedControl) {
+        profile?.rate(sender.selectedSegmentIndex + 1)
+        popView(sender)
+    }
 }

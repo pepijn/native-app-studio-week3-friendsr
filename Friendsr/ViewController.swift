@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, NSXMLParserDelegate {
     @IBOutlet weak var leftColumn: UIStackView!
     @IBOutlet weak var rightColumn: UIStackView!
-    @IBOutlet weak var profileView: UIView! {
-        didSet {
-            profileView.removeFromSuperview()
-        }
-    }
+    @IBOutlet weak var profileView: UIView!
 
     var profiles = [Profile]() {
         didSet {
+            leftColumn.subviews.forEach({
+                if !$0.hidden {
+                    $0.removeFromSuperview()
+                }
+            })
+            rightColumn.subviews.forEach({ $0.removeFromSuperview() })
+
             for (index, profile) in profiles.enumerate() {
                 let view = NSKeyedUnarchiver.unarchiveObjectWithData(NSKeyedArchiver.archivedDataWithRootObject(profileView)) as! UIView
 
@@ -29,12 +33,18 @@ class ViewController: UIViewController, NSXMLParserDelegate {
                 button.setTitle(profile.shortName, forState: .Normal)
                 button.addTarget(self, action: "pickProfile:", forControlEvents: .TouchDown)
 
+                if profile.rating != nil {
+                    let rating = view.subviews[2] as! UILabel
+                    rating.text = "\(profile.rating!) ★"
+                }
+
                 var parentView: UIStackView
                 if index < 3 {
                     parentView = leftColumn
                 } else {
                     parentView = rightColumn
                 }
+                view.hidden = false
                 parentView.addArrangedSubview(view)
             }
         }
@@ -54,7 +64,6 @@ class ViewController: UIViewController, NSXMLParserDelegate {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationViewController = segue.destinationViewController as! ProfileViewController
-        
         destinationViewController.profile = sender as? Profile
     }
 
@@ -66,7 +75,20 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         let parser = NSXMLParser.init(contentsOfURL: NSURL.init(fileURLWithPath: path!))!
         parser.delegate = self
         parser.parse()
+        profileView.hidden = true
 
+        let soundFilePath = NSBundle.mainBundle().pathForResource("friends_theme", ofType: "mp3")
+        let soundFileURL = NSURL(fileURLWithPath: soundFilePath!)
+        do {
+            let player = try AVAudioPlayer(contentsOfURL: soundFileURL)
+            player.numberOfLoops = -1 //infinite
+            player.play()
+        } catch {
+            print("fail")
+        }
+    }
+
+    override func viewWillAppear(animated: Bool) {
         var profiles = [Profile]()
         for (i, _) in shortNames.enumerate() {
             let profile = Profile(shortName: shortNames[i], fullName: fullNames[i], details: details[i])

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0D74C11BF3CE950076EF45 /* friends_theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D0D74C01BF3CE950076EF45 /* friends_theme.mp3 */; };
 		3DE5C1271BF377F6008BF826 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5C1261BF377F6008BF826 /* AppDelegate.swift */; };
 		3DE5C1291BF377F6008BF826 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5C1281BF377F6008BF826 /* ViewController.swift */; };
 		3DE5C12C1BF377F6008BF826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE5C12A1BF377F6008BF826 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0D74C01BF3CE950076EF45 /* friends_theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = friends_theme.mp3; sourceTree = "<group>"; };
 		3DE5C1231BF377F6008BF826 /* Friendsr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendsr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE5C1261BF377F6008BF826 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE5C1281BF377F6008BF826 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				3DE5C1281BF377F6008BF826 /* ViewController.swift */,
 				3DE5C1401BF39D91008BF826 /* ProfileViewController.swift */,
 				3DE5C13E1BF38C09008BF826 /* Profile.swift */,
+				3D0D74C01BF3CE950076EF45 /* friends_theme.mp3 */,
 				3DE5C12A1BF377F6008BF826 /* Main.storyboard */,
 				3DE5C12D1BF377F6008BF826 /* Assets.xcassets */,
 				3DE5C12F1BF377F6008BF826 /* LaunchScreen.storyboard */,
@@ -132,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0D74C11BF3CE950076EF45 /* friends_theme.mp3 in Resources */,
 				3DE5C13B1BF38251008BF826 /* friends.xml in Resources */,
 				3DE5C1311BF377F6008BF826 /* LaunchScreen.storyboard in Resources */,
 				3DE5C12E1BF377F6008BF826 /* Assets.xcassets in Resources */,
@@ -301,6 +305,7 @@
 				3DE5C1371BF377F6008BF826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

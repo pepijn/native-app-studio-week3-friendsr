@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adp-km-wVl">
-                                                <rect key="frame" x="0.5" y="38" width="600" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="38" width="600" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,15 +59,25 @@
                                                                 <animations/>
                                                                 <state key="normal" title="Monica"/>
                                                             </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yt-CJ-nP8">
+                                                                <rect key="frame" x="0.0" y="146" width="300" height="20.5"/>
+                                                                <animations/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <animations/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
+                                                            <constraint firstItem="7Yt-CJ-nP8" firstAttribute="top" secondItem="sXw-0X-36N" secondAttribute="bottom" constant="8" id="2Hl-gh-K0a"/>
                                                             <constraint firstItem="sXw-0X-36N" firstAttribute="width" secondItem="1eN-cB-dLU" secondAttribute="width" id="C3N-pI-tKv"/>
                                                             <constraint firstItem="nPX-6n-mNz" firstAttribute="top" secondItem="1eN-cB-dLU" secondAttribute="top" id="Iij-19-VG1"/>
                                                             <constraint firstItem="nPX-6n-mNz" firstAttribute="centerX" secondItem="1eN-cB-dLU" secondAttribute="centerX" id="Tt3-M5-Dt3"/>
                                                             <constraint firstItem="sXw-0X-36N" firstAttribute="top" secondItem="nPX-6n-mNz" secondAttribute="bottom" constant="8" id="Ybp-Fs-RFv"/>
                                                             <constraint firstItem="sXw-0X-36N" firstAttribute="centerX" secondItem="1eN-cB-dLU" secondAttribute="centerX" id="hcH-52-lZ4"/>
+                                                            <constraint firstItem="7Yt-CJ-nP8" firstAttribute="width" secondItem="sXw-0X-36N" secondAttribute="width" id="yAY-ZB-esb"/>
+                                                            <constraint firstItem="7Yt-CJ-nP8" firstAttribute="centerX" secondItem="1eN-cB-dLU" secondAttribute="centerX" id="yW0-mB-ejE"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -127,22 +137,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ene-Kb-Obz">
                                 <rect key="frame" x="100" y="28" width="400" height="549"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="teu-Fg-uwd">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="zCK-Jv-X1H"/>
-                                        </constraints>
-                                    </stackView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monica" translatesAutoresizingMaskIntoConstraints="NO" id="k2u-OP-d5v">
-                                        <rect key="frame" x="0.0" y="66" width="400" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="alL-Mg-28q"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zl-xJ-UE4">
-                                        <rect key="frame" x="0.0" y="392" width="400" height="30"/>
+                                        <rect key="frame" x="0.0" y="326" width="400" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="qbZ-kC-cEF"/>
@@ -151,8 +154,22 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="qRO-CS-yA7">
+                                        <rect key="frame" x="0.0" y="382" width="400" height="29"/>
+                                        <animations/>
+                                        <segments>
+                                            <segment title="1 ★"/>
+                                            <segment title="2 ★"/>
+                                            <segment title="3 ★"/>
+                                            <segment title="4 ★"/>
+                                            <segment title="5 ★"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="rate:" destination="To0-cM-Scz" eventType="valueChanged" id="AmQ-Ya-Aoh"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kF5-yj-pzA">
-                                        <rect key="frame" x="0.0" y="448" width="400" height="101"/>
+                                        <rect key="frame" x="0.0" y="436" width="400" height="113"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -177,7 +194,7 @@
                         <outlet property="details" destination="kF5-yj-pzA" id="Hjy-m6-znf"/>
                         <outlet property="name" destination="3Zl-xJ-UE4" id="4RA-nD-GZ4"/>
                         <outlet property="profileImage" destination="k2u-OP-d5v" id="3o7-Cu-7Ed"/>
-                        <outlet property="ratingButtonContainer" destination="teu-Fg-uwd" id="VDC-y4-oK8"/>
+                        <outlet property="ratingControl" destination="qRO-CS-yA7" id="kae-pu-4y3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIU-vd-tOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
