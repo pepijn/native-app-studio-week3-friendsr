@@ -12,6 +12,9 @@
 		3DE5C12C1BF377F6008BF826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE5C12A1BF377F6008BF826 /* Main.storyboard */; };
 		3DE5C12E1BF377F6008BF826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE5C12D1BF377F6008BF826 /* Assets.xcassets */; };
 		3DE5C1311BF377F6008BF826 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE5C12F1BF377F6008BF826 /* LaunchScreen.storyboard */; };
+		3DE5C13B1BF38251008BF826 /* friends.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DE5C13A1BF38251008BF826 /* friends.xml */; };
+		3DE5C13F1BF38C09008BF826 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5C13E1BF38C09008BF826 /* Profile.swift */; };
+		3DE5C1411BF39D91008BF826 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5C1401BF39D91008BF826 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3DE5C12D1BF377F6008BF826 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE5C1301BF377F6008BF826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE5C1321BF377F6008BF826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE5C13A1BF38251008BF826 /* friends.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = friends.xml; sourceTree = "<group>"; };
+		3DE5C13E1BF38C09008BF826 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3DE5C1401BF39D91008BF826 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				3DE5C1261BF377F6008BF826 /* AppDelegate.swift */,
 				3DE5C1281BF377F6008BF826 /* ViewController.swift */,
+				3DE5C1401BF39D91008BF826 /* ProfileViewController.swift */,
+				3DE5C13E1BF38C09008BF826 /* Profile.swift */,
 				3DE5C12A1BF377F6008BF826 /* Main.storyboard */,
 				3DE5C12D1BF377F6008BF826 /* Assets.xcassets */,
 				3DE5C12F1BF377F6008BF826 /* LaunchScreen.storyboard */,
 				3DE5C1321BF377F6008BF826 /* Info.plist */,
+				3DE5C13A1BF38251008BF826 /* friends.xml */,
 			);
 			path = Friendsr;
 			sourceTree = "<group>";
@@ -123,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE5C13B1BF38251008BF826 /* friends.xml in Resources */,
 				3DE5C1311BF377F6008BF826 /* LaunchScreen.storyboard in Resources */,
 				3DE5C12E1BF377F6008BF826 /* Assets.xcassets in Resources */,
 				3DE5C12C1BF377F6008BF826 /* Main.storyboard in Resources */,
@@ -137,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE5C1291BF377F6008BF826 /* ViewController.swift in Sources */,
+				3DE5C13F1BF38C09008BF826 /* Profile.swift in Sources */,
+				3DE5C1411BF39D91008BF826 /* ProfileViewController.swift in Sources */,
 				3DE5C1271BF377F6008BF826 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Friendsr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.epij.p.Friendsr;
@@ -261,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Friendsr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.epij.p.Friendsr;
