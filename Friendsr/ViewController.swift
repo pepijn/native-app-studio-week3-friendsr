@@ -59,7 +59,6 @@ class ViewController: UIViewController, NSXMLParserDelegate {
             }
             performSegueWithIdentifier("detailView", sender: profile)
         }
-        print(shortName)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
